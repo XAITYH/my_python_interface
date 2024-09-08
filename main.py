@@ -14,16 +14,18 @@ class App(ctk.CTk):
         self.geometry(f"{appWidth}x{appHeight}")
         self.resizable(False, False)
         
+        self.my_name_frame = ctk.CTkFrame(master=self, fg_color="#F5F5F5")
+        self.my_name_frame.grid(row=0, column=0, sticky="nsew")
+        
         self.my_name_font = ctk.CTkFont(family="Helvetica", size=44,
             weight="bold", slant="italic", underline=True)
-        
         self.my_name_var = tk.StringVar()
         self.my_name = ctk.CTkLabel(
-            master=self, text="It's me, XAITYH!",
+            master=self.my_name_frame, text="It's me, XAITYH!",
             font=self.my_name_font,
             justify="center",
             width=600,
-            text_color="spring green"
+            text_color="#48CFCB"
         )
         self.my_name.grid(row=0, column=0)
 
